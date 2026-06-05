@@ -1,40 +1,1212 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="Console Based Scientific Calculator" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/Console Based Scientific Calculator" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/Console Based Scientific Calculator" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-			<Add option="-fexceptions" />
-		</Compiler>
-		<Unit filename="main.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+#include <iostream>
+#include <cmath>
+#define PI 3.141592653589793
+
+using namespace std;
+
+long double cal_j(long double a)
+{
+    return a*(4.1858);
+}
+
+long double j_cal(long double a)
+{
+    return a/(4.1858);
+}
+
+long double C_F(long double a)
+{
+    return ((9*a)/5);
+}
+
+long double F_C(long double a)
+{
+    return ((5*a)/9);
+}
+
+long double kpa_lbf_in_sqr(long double a)
+{
+    return a/(6.894757);
+}
+
+long double lbf_in_sqr_kpa(long double a)
+{
+    return a*(6.894757);
+}
+
+long double j_kgf_m(long double a)
+{
+    return a/(9.80665);
+}
+
+long double kgf_m_j(long double a)
+{
+    return a*(9.80665);
+}
+
+long double pa_kgf_cm_sqr(long double a)
+{
+    return a/(98066.5);
+}
+
+long double kgf_cm_sqr_pa(long double a)
+{
+    return a*(98066.5);
+}
+
+long double kw_hp(long double a)
+{
+    return a*(1.341021859);
+}
+
+long double hp_kw(long double a)
+{
+    return a/(1.341021859);
+}
+
+long double pa_mmHg(long double a)
+{
+    return a/(133.3224);
+}
+
+long double mmHg_pa(long double a)
+{
+    return a*(133.3224);
+}
+
+long double pa_atm(long double a)
+{
+    return a/(101325.0);
+}
+
+long long atm_pa(long double a)
+{
+    return a*(101325.0);
+}
+
+double kg_lb(double a)
+{
+    return a*(2.204622476);
+}
+
+double lb_kg(double a)
+{
+    return a/(2.204622476);
+}
+
+long double g_oz(double a)
+{
+    return a/(28.34952);
+}
+
+long double oz_g(double a)
+{
+    return a*(28.34952);
+}
+
+long double m_s_km_h(double a)
+{
+    return ((a*3600.0)/1000.0);
+}
+
+long double km_h_m_s(double a)
+{
+    return ((a*1000.0)/3600.0);
+}
+
+long double km_pc(double a)
+{
+    return a/(30856780000000.0);
+}
+
+long long pc_km(long double a)
+{
+    return a*(30856780000000.0);
+}
+
+double l_gal_UK(double a)
+{
+    return a/(4.54609);
+}
+
+double gal_UK_l(double a)
+{
+    return a*(4.54609);
+}
+
+double l_gal_US(double a)
+{
+    return a/(3.785412);
+}
+
+double gal_US_l(double a)
+{
+    return a*(3.785412);
+}
+
+double m_square_acre(double a)
+{
+    return a/(4046.856);
+}
+
+double acre_m_square(double a)
+{
+    return a*(4046.856);
+}
+
+double m_nmile(double a)
+{
+    return a/(1852.0);
+}
+
+double nmile_m(double a)
+{
+    return a*(1852.0);
+}
+
+double km_mile(double a)
+{
+    return a/(1.609344);
+}
+
+double mile_km(double a)
+{
+    return a*(1.609344);
+}
+
+double m_yd(double a)
+{
+    return a*(1.093613298);
+}
+
+double yd_m(double a)
+{
+    return a/(1.093613298);
+}
+
+double m_ft(double a)
+{
+    return a*(3.280839895);
+}
+
+double ft_m(double a)
+{
+    return a/(3.280839895);
+}
+
+double cm_in(double a)
+{
+    return a/2.54;
+}
+
+double in_cm(double a)
+{
+    return a*2.54;
+}
+
+double trig_cot_invers(double a)
+{
+    return atan(1.0/a);
+}
+
+double trig_cot(double redian)
+{
+    return (1.0/tan(redian));
+}
+
+double trig_sec_invers(double a)
+{
+    return acos(1.0/a);
+}
+
+double trig_sec(double redian)
+{
+    return (1.0/cos(redian));
+}
+
+double trig_cosec_invers(double a)
+{
+    return asin(1.0/a);
+}
+
+double trig_cosec(double redian)
+{
+    return (1.0/sin(redian));
+}
+
+double trig_tan_invers(double a)
+{
+    return atan(a);
+}
+
+double trig_tan(double redian)
+{
+    return tan(redian);
+}
+
+double trig_cos_invers(double a)
+{
+    return acos(a);
+}
+
+double trig_cos(double redian)
+{
+    return cos(redian);
+}
+
+double trig_sin_invers(double a)
+{
+    return asin(a);
+}
+
+double trig_sin(double redian)
+{
+    return sin(redian);
+}
+
+double n_base_log(double a, double n)
+{
+    return (log(a)/log(n));
+}
+
+double ten_base_log(double a)
+{
+    return log10(a);
+}
+
+double e_base_log(double a)
+{
+    return log(a);
+}
+
+double N_Root(double a, double n)
+{
+    return pow(a, (1.0/n));
+}
+
+double cube_root(double a)
+{
+    return cbrt(a);
+}
+
+double square_root(double a)
+{
+    return sqrt(a);
+}
+
+double powern(double a, double b)
+{
+    return pow(a, b);
+}
+
+double divide(double a, double b)
+{
+    return a/b;
+}
+
+double multiply4(double a, double b, double c, double d)
+{
+    return a*b*c*d;
+}
+
+double multiply3(double a, double b, double c)
+{
+    return a*b*c;
+}
+
+double multiply2(double a, double b)
+{
+    return a*b;
+}
+
+double sub(double a, double b)
+{
+    return a-b;
+}
+
+double sum4(double a, double b, double c, double d)
+{
+    return a+b+c+d;
+}
+
+double sum3(double a, double b, double c)
+{
+    return a+b+c;
+}
+
+double sum2(double a, double b)
+{
+    return a+b;
+}
+
+int main()
+{
+    cout << "1. Arithmetic Operations" << endl;
+    cout << "2. Root and Power" << endl;
+    cout << "3. Logarithm" << endl;
+    cout << "4. Trigonometry" << endl;
+    cout << "5. Unit Conversion" << endl;
+    cout << "6. Factorial" << endl;
+    cout << "7. Exit" << endl;
+
+    int choose1;
+    cout << "Enter: ";
+    cin >> choose1;
+
+    if (choose1 == 1)
+    {
+        cout << "1. Sum of 2 Numbers" << endl;
+        cout << "2. Sum of 3 Numbers" << endl;
+        cout << "3. Sum of 4 Numbers" << endl;
+        cout << "4. Substraction" << endl;
+        cout << "5. Multiply 2 Numbers" << endl;
+        cout << "6. Multiply 3 Numbers" << endl;
+        cout << "7. Multiply 4 Numbers" << endl;
+        cout << "8. Divide 2 Numbers" << endl;
+
+        int choose2;
+        cout << "Enter: ";
+        cin >> choose2;
+
+        if (choose2 == 1)
+        {
+            double a, b, sum;
+            cout << "Enter 2 Numbers: ";
+            cin >> a >> b;
+            sum = sum2(a, b);
+            cout << sum;            
+        }
+
+        else if (choose2 == 2)
+        {
+            double a, b, c, sum;
+            cout << "Enter 3 Numbers: ";
+            cin >> a >> b >> c;
+            sum = sum3(a, b, c);
+            cout << sum;
+        }
+
+        else if (choose2 == 3)
+        {
+            double a, b, c, d, sum;
+            cout << "Enter 4 Numbers: ";
+            cin >> a >> b >> c >> d;
+            sum = sum4(a, b, c, d);
+            cout << sum;            
+        }
+
+        else if (choose2 == 4)
+        {
+            double a, b, result;
+            cout << "Enter 2 Numbers: ";
+            cin >> a >> b;
+            result = sub(a, b);
+            cout << result;
+        }
+
+        else if (choose2 == 5)
+        {
+            double a, b, result;
+            cout << "Enter 2 Numbers: ";
+            cin >> a >> b;
+            result = multiply2(a, b);
+            cout << result;
+        }
+
+        else if (choose2 == 6)
+        {
+            double a, b, c, result;
+            cout << "Enter 3 Numbers: ";
+            cin >> a >> b >> c;
+            result = multiply3(a, b, c);
+            cout << result;
+        }
+
+        else if (choose2 == 7)
+        {
+            double a, b, c, d, result;
+            cout << "Enter 4 Numbers: ";
+            cin >> a >> b >> c >> d;
+            result = multiply4(a, b, c, d);
+            cout << result;
+        }
+
+        else if (choose2 == 8)
+        {
+            double a, b, result;
+            cout << "Enter 2 Numbers: ";
+            cin >> a >> b;
+            if (b == 0)
+            {
+                cout << "Math Error!" << endl;
+            }
+            else
+            {
+                result = divide(a, b);
+                cout << result;
+            }
+        }
+    }
+
+    else if (choose1 == 2)
+    {
+        cout << "1. Power" << endl;
+        cout << "2. Square Root" << endl;
+        cout << "3. Cube Root" << endl;
+        cout << "4. nth Root" << endl;
+
+        int choose2;
+        cout << "Enter: ";
+        cin >> choose2;
+
+        if (choose2 == 1)
+        {
+            double base, power, result;
+            cout << "Enter Base and Power: ";
+            cin >> base >> power;
+            result = powern(base, power);
+            cout << result;
+        }
+
+        else if (choose2 == 2)
+        {
+            double a, result;
+            cout << "Enter a Number: ";
+            cin >> a;
+            result = square_root(a);
+            cout << result;
+        }
+
+        else if (choose2 == 3)
+        {
+            double a, result;
+            cout << "Enter a Number: ";
+            cin >> a;
+            result = cube_root(a);
+            cout << result;
+        }
+
+        else if (choose2 == 4)
+        {
+            double a, n, result;
+            cout << "Enter Base and N_Root: ";
+            cin >> a >> n;
+            result = N_Root(a, n);
+            cout << result;
+        }
+    }
+
+    else if (choose1 == 3)
+    {
+        cout << "1. ln" << endl;
+        cout << "2. log" << endl;
+        cout << "3. N Base log" << endl;
+
+        int choose2;
+        cout << "Enter: ";
+        cin >> choose2;
+
+        if (choose2 == 1)
+        {
+            double a, result;
+            cout << "Enter a Number: ";
+            cin >> a;
+            result = e_base_log(a);
+            cout << result;
+        }
+
+        else if (choose2 == 2)
+        {
+            double a, result;
+            cout << "Enter a Number: ";
+            cin >> a;
+            result = ten_base_log(a);
+            cout << result;
+        }
+
+        else if (choose2 == 3)
+        {
+            double a, n, result;
+            cout << "Enter Base and Number: ";
+            cin >> n >> a;
+            result = n_base_log(a, n);
+            cout << result;
+        }
+    }
+
+    else if (choose1 == 4)
+    {
+        cout << "1. sin" << endl;
+        cout << "2. cos" << endl;
+        cout << "3. tan" << endl;
+        cout << "4. cosec" << endl;
+        cout << "5. sec" << endl;
+        cout << "6. cot" << endl;
+
+        int choose2;
+        cout << "Enter: ";
+        cin >> choose2;
+
+        if (choose2 == 1)
+        {
+            cout << "1. sin" << endl;
+            cout << "2. sin^(-1)" << endl;
+
+            int choose3;
+            cout << "Enter: ";
+            cin >> choose3;
+
+            if (choose3 == 1)
+            {
+                double a, result, redian;
+                cout << "Enter theta: ";
+                cin >> a;
+                redian = a*(PI/180.0);
+                result = trig_sin(redian);
+                cout << result;
+            }
+
+            else if (choose3 == 2)
+            {
+                double a, result, degree;
+                cout << "Enter the value: ";
+                cin >> a;
+                if ((a < -1) || (a > 1))
+                {
+                    cout << "Math Error..." << endl;
+                }
+                else
+                {
+                    result = trig_sin_invers(a);
+                    degree = result*(180.0/PI);
+                    cout << degree;
+                }
+            }
+        }
+
+        else if (choose2 == 2)
+        {
+            cout << "1. cos" << endl;
+            cout << "2. cos^(-1)" << endl;
+
+            int choose3;
+            cout << "Enter: ";
+            cin >> choose3;
+
+            if (choose3 == 1)
+            {
+                double a, redian, result;
+                cout << "Enter theta: ";
+                cin >> a;
+                redian = a*(PI/180.0);
+                result = trig_cos(redian);
+                cout << result;
+            }
+
+            else if (choose3 == 2)
+            {
+                double a, degree, result;
+                cout << "Enter the value: ";
+                cin >> a;
+                if ((a < -1) || (a > 1))
+                {
+                    cout << "Math Error...";
+                }
+                else
+                {
+                    result = trig_cos_invers(a);
+                    degree = result*(180.0/PI);
+                    cout << degree;
+                }
+            }
+        }
+
+        else if (choose2 == 3)
+        {
+            cout << "1. tan" << endl;
+            cout << "2. tan^(-1)" << endl;
+
+            int choose3;
+            cout << "Enter: ";
+            cin >> choose3;
+
+            if (choose3 == 1)
+            {
+                double a, redian, result;
+                cout << "Enter theta: ";
+                cin >> a;
+                if ((int)a%180 == 90)
+                {
+                    cout << "Undefined" << endl;
+                }
+                else 
+                {
+                    redian = a*(PI/180.0);
+                    result = trig_tan(redian);
+                    cout << result;
+                }
+            }
+
+            else if (choose3 == 2)
+            {
+                double a, degree, result;
+                cout << "Enter the value: ";
+                cin >> a;
+                result = trig_tan_invers(a);
+                degree = result*(180.0/PI);
+                cout << degree;
+            }
+        }
+
+        else if (choose2 == 4)
+        {
+            cout << "1. cosec" << endl;
+            cout << "2. cosec^(-1)" << endl;
+
+            int choose3;
+            cout << "Enter: ";
+            cin >> choose3;
+
+            if (choose3 == 1)
+            {
+                double a, redian, result;
+                cout << "Enter theta: ";
+                cin >> a;
+                if ((int)a%180 == 0)
+                {
+                    cout << "Undefined" << endl;
+                }
+
+                else
+                {
+                    redian = a*(PI/180.0);
+                    result = trig_cosec(redian);
+                    cout << result;
+                }
+            }
+
+            else if (choose3 == 2)
+            {
+                double a, degree, result;
+                cout << "Enter the value: ";
+                cin >> a;
+                if ((a > -1) && (a < 1))
+                {
+                    cout << "Math Error..." << endl;
+                }
+                else
+                {
+                    result = trig_cosec_invers(a);
+                    degree = result*(180.0/PI);
+                    cout << degree;
+                }    
+            }
+        }
+
+        else if (choose2 == 5)
+        {
+            cout << "1. sec" << endl;
+            cout << "2. sec^(-1)" << endl;
+
+            int choose3;
+            cout << "Enter: ";
+            cin >> choose3;
+
+            if (choose3 == 1)
+            {
+                double a, redian, result;
+                cout << "Enter theta: ";
+                cin >> a;
+                if ((int)a%180 == 90)
+                {
+                    cout << "Undefined" << endl;
+                }
+
+                else
+                {
+                    redian = a*(PI/180.0);
+                    result = trig_sec(redian);
+                    cout << result;
+                }
+            }
+
+            else if (choose3 == 2)
+            {
+                double a, degree, result;
+                cout << "Enter the value: ";
+                cin >> a;
+                if ((a > -1) && (a < 1))
+                {
+                    cout << "Math Error..." << endl;
+                }
+                else
+                {
+                    result = trig_sec_invers(a);
+                    degree = result*(180.0/PI);
+                    cout << degree;
+                }
+            }
+        }
+
+        else if (choose2 == 6)
+        {
+            cout << "1. cot" << endl;
+            cout << "2. cot^(-1)" << endl;
+
+            int choose3;
+            cout << "Enter: ";
+            cin >> choose3;
+
+            if (choose3 == 1)
+            {
+                double a, redian, result;
+                cout << "Enter theta: ";
+                cin >> a;
+                if ((int)a%180 == 0)
+                {
+                    cout << "Undefined" << endl;
+                }
+
+                else
+                {
+                    redian = a*(PI/180.0);
+                    result = trig_cot(redian);
+                    cout << result;
+                }
+            }
+
+            else if (choose3 == 2)
+            {
+                double a, degree, result;
+                cout << "Enter the value: ";
+                cin >> a;
+                if (a == 0)
+                {
+                    cout << "Math Error..." << endl;
+                }
+                else
+                {
+                    result = trig_cot_invers(a);
+                    degree = result*(180.0/PI);
+                    cout << degree;
+                }    
+            }
+        }
+    }
+
+    else if (choose1 == 5)
+    {
+        cout << "1. in to cm" << "         |-|   " << "2. cm to in" << endl;
+        cout << "3. ft to m" << "          |-|   " << "4. m to ft" << endl;
+        cout << "5. yd to m" << "          |-|   " << "6. m to yd" << endl;
+        cout << "7. mile to km" << "       |-|   " << "8. km to mile" << endl;
+        cout << "9. n mile to m" << "      |-|   " << "10. m to n mile" << endl;
+        cout << "11. acre to m^2" << "     |-|   " << "12. m^2 to acre" << endl;
+        cout << "13. gal(US) to l" << "    |-|   " << "14. l to gal(US)" << endl;
+        cout << "15. gal(UK) to l" << "    |-|   " << "16. l to gal(UK)" << endl;
+        cout << "17. pc to km" << "        |-|   " << "18. km to pc" << endl;
+        cout << "19. km/h to  m/s" << "    |-|   " << "20. m/s to km/h" << endl;
+        cout << "21. oz to g" << "         |-|   " << "22. g to oz" << endl;
+        cout << "23. lb to kg" << "        |-|   " << "24. kg to lb" << endl;
+        cout << "25. atm to pa" << "       |-|   " << "26. pa to atm" << endl;
+        cout << "27. mmHg to pa" << "      |-|   " << "28. pa to mmHg" << endl;
+        cout << "29. hp to kW" << "        |-|   " << "30. kW to hp" << endl;
+        cout << "31. kgf/cm^2 to pa" << "  |-|   " << "32. pa to kgf/cm^2" << endl;
+        cout << "33. kg.m to j" << "       |-|   " << "34. j to kg.m" << endl;
+        cout << "35. lbf/in^2 to kpa" << "  |-|   " << "36. kpa to lbf/in^2" << endl;
+        cout << "37. F to C" << "          |-|   " << "38. C to F" << endl;
+        cout << "39. j to cal" << "        |-|   " << "40. cal to j" << endl;
+
+        int choose2;
+        cout << "Enter: ";
+        cin >> choose2;
+
+        if (choose2 == 1)
+        {
+            double in, result;
+            cout << "Enter value: ";
+            cin >> in;
+            result = in_cm(in);
+            cout << result << " " << "cm";
+        }
+
+        else if (choose2 == 2)
+        {
+            double cm, result;
+            cout << "Enter value: ";
+            cin >> cm;
+            result = cm_in(cm);
+            cout << result << " " << "in";
+        }
+
+        else if (choose2 == 3)
+        {
+            double ft, result;
+            cout << "Enter value: ";
+            cin >> ft;
+            result = ft_m(ft);
+            cout << result << " " << "m";     
+        }
+
+        else if (choose2 == 4)
+        {
+            double m, result;
+            cout << "Enter value: ";
+            cin >> m;
+            result = m_ft(m);
+            cout << result << " " << "ft";
+        }
+
+        else if (choose2 == 5)
+        {
+            double yd, result;
+            cout << "Enter value: ";
+            cin >> yd;
+            result = yd_m(yd);
+            cout << result << " " << "m";
+        }
+
+        else if (choose2 == 6)
+        {
+            double m, result;
+            cout << "Enter value: ";
+            cin >> m;
+            result = m_yd(m);
+            cout << result << " " << "yd";
+        }
+
+        else if (choose2 == 7)
+        {
+            double mile, result;
+            cout << "Enter value: ";
+            cin >> mile;
+            result = mile_km(mile);
+            cout << result << " " << "km";
+        }
+
+        else if (choose2 == 8)
+        {
+            double km, result;
+            cout << "Enter value: ";
+            cin >> km;
+            result = km_mile(km);
+            cout << result << " " << "mile";
+        }
+
+        else if (choose2 == 9)
+        {
+            double n_mile, result;
+            cout << "Enter value: ";
+            cin >> n_mile;
+            result = nmile_m(n_mile);
+            cout << result << " " << "m";
+        }
+
+        else if (choose2 == 10)
+        {
+            double m, result;
+            cout << "Enter value: ";
+            cin >> m;
+            result = m_nmile(m);
+            cout << result << " " << "n mile";
+        }
+
+        else if (choose2 == 11)
+        {
+            double acre, result;
+            cout << "Enter value: ";
+            cin >> acre;
+            result = acre_m_square(acre);
+            cout << result << " " << "m^2";
+        }
+
+        else if (choose2 == 12)
+        {
+            double m_square, result;
+            cout << "Enter value: ";
+            cin >> m_square;
+            result = m_square_acre(m_square);
+            cout << result << " " << "acre";
+        }
+
+        else if (choose2 == 13)
+        {
+            double gal_US, result;
+            cout << "Enter value: ";
+            cin >> gal_US;
+            result = gal_US_l(gal_US);
+            cout << result << " " << "l";
+        }
+
+        else if (choose2 == 14)
+        {
+            double l, result;
+            cout << "Enter value: ";
+            cin >> l;
+            result = l_gal_US(l);
+            cout << result << " " << "gal(US)";
+        }
+
+        else if (choose2 == 15)
+        {
+            double gal_UK, result;
+            cout << "Enter value: ";
+            cin >> gal_UK;
+            result = gal_UK_l(gal_UK);
+            cout << result << " " << "l";
+        }
+
+        else if (choose2 == 16)
+        {
+            double l, result;
+            cout << "Enter value: ";
+            cin >> l;
+            result = l_gal_UK(l);
+            cout << result << " " << "gal(UK)";
+        }
+
+        else if (choose2 == 17)
+        {
+            long double pc;
+            long long result;
+            cout << "Enter value: ";
+            cin >> pc;
+            result = pc_km(pc);
+            cout << result << " " << "km";
+        }
+
+        else if (choose2 == 18)
+        {
+            double km;
+            long double result;
+            cout << "Enter value: ";
+            cin >> km;
+            result = km_pc(km);
+            cout << result << " " << "pc";
+        }
+
+        else if (choose2 == 19)
+        {
+            double km_h;
+            long double result;
+            cout << "Enter value: ";
+            cin >> km_h;
+            result = km_h_m_s(km_h);
+            cout << result << " " << "m/s";
+        }
+
+        else if (choose2 == 20)
+        {
+            double m_s;
+            long double result;
+            cout << "Enter value: ";
+            cin >> m_s;
+            result = m_s_km_h(m_s);
+            cout << result << " " << "km/h";
+        }
+
+        else if (choose2 == 21)
+        {
+            double oz;
+            long double result;
+            cout << "Enter value: ";
+            cin >> oz;
+            result = oz_g(oz);
+            cout << result << " " << "g";
+        }
+
+        else if (choose2 == 22)
+        {
+            double g;
+            long double result;
+            cout << "Enter value: ";
+            cin >> g;
+            result = g_oz(g);
+            cout << result << " " << "oz";
+        }
+
+        else if (choose2 == 23)
+        {
+            double lb, result;
+            cout << "Enter value: ";
+            cin >> lb;
+            result = lb_kg(lb);
+            cout << result << " " << "kg";
+        }
+
+        else if (choose2 == 24)
+        {
+            double kg, result;
+            cout << "Enter value: ";
+            cin >> kg;
+            result = kg_lb(kg);
+            cout << result << " " << "lb";
+        }
+
+        else if (choose2 == 25)
+        {
+            long double atm;
+            long long result;
+            cout << "Enter value: ";
+            cin >> atm;
+            result = atm_pa(atm);
+            cout << result << " " << "pa";
+        }
+
+        else if (choose2 == 26)
+        {
+            long double pa, result;
+            cout << "Enter value: ";
+            cin >> pa;
+            result = pa_atm(pa);
+            cout << result << " " << "atm";
+        }
+
+        else if (choose2 == 27)
+        {
+            long double mmHg, result;
+            cout << "Enter value: ";
+            cin >> mmHg;
+            result = mmHg_pa(mmHg);
+            cout << result << " " << "pa";
+        }
+
+        else if (choose2 == 28)
+        {
+            long double pa, result;
+            cout << "Enter value: ";
+            cin >> pa;
+            result = pa_mmHg(pa);
+            cout << result << " " << "mmHg";
+        }
+
+        else if (choose2 == 29)
+        {
+            long double hp, result;
+            cout << "Enter value: ";
+            cin >> hp;
+            result = hp_kw(hp);
+            cout << result << " " << "kw";
+        }
+
+        else if (choose2 == 30)
+        {
+            long double kw, result;
+            cout << "Enter value: ";
+            cin >> kw;
+            result = kw_hp(kw);
+            cout << result << " " << "hp";
+        }
+
+        else if (choose2 == 31)
+        {
+            long double kgf_cm_sqr, result;
+            cout << "Enter value: ";
+            cin >> kgf_cm_sqr;
+            result = kgf_cm_sqr_pa(kgf_cm_sqr);
+            cout << result << " " << "pa";
+        }
+
+        else if (choose2 == 32)
+        {
+            long double pa, result;
+            cout << "Enter value: ";
+            cin >> pa;
+            result = pa_kgf_cm_sqr(pa);
+            cout << result << " " << "kgf/cm^2";
+        }
+
+        else if (choose2 == 33)
+        {
+            long double kgf_m, result;
+            cout << "Enter value: ";
+            cin >> kgf_m;
+            result = kgf_m_j(kgf_m);
+            cout << result << " " << "j";
+        }
+
+        else if (choose2 == 34)
+        {
+            long double j, result;
+            cout << "Enter value: ";
+            cin >> j;
+            result = j_kgf_m(j);
+            cout << result << " " << "kgf.m";
+        }
+
+        else if (choose2 == 35)
+        {
+            long double lbf_in_sqr, result;
+            cout << "Enter value: ";
+            cin >> lbf_in_sqr;
+            result = lbf_in_sqr_kpa(lbf_in_sqr);
+            cout << result << " " << "kpa";
+        }
+
+        else if (choose2 == 36)
+        {
+            long double kpa, result;
+            cout << "Enter value: ";
+            cin >> kpa;
+            result = kpa_lbf_in_sqr(kpa);
+            cout << result << " " << "lbf/in^2";
+        }
+
+        else if (choose2 == 37)
+        {
+            long double F, result;
+            cout << "Enter value: ";
+            cin >> F;
+            result = F_C(F);
+            cout << result << " " << "C";
+        }
+
+        else if (choose2 == 38)
+        {
+            long double C, result;
+            cout << "Enter value: ";
+            cin >> C;
+            result = C_F(C);
+            cout << result << " " << "F";
+        }
+
+        else if (choose2 == 39)
+        {
+            long double j, result;
+            cout << "Enter value: ";
+            cin >> j;
+            result = j_cal(j);
+            cout << result << " " << "cal";
+        }
+
+        else if (choose2 == 40)
+        {
+            long double cal, result;
+            cout << "Enter value: ";
+            cin >> cal;
+            result = cal_j(cal);
+            cout << result << " " << "j";
+        }
+    }
+
+    else if (choose1 == 6)
+    {
+        int num;
+        cout << "Enter a number: ";
+        cin >> num;
+
+        int fact=1;
+        for (int i=1; i<=num; i++)
+        {
+            fact *= i;
+        }
+
+        cout << "The Factorial of " << num << " is " << fact;
+    }
+
+    else if (choose1 == 7)
+    {
+        return 0;
+    }
+    return 0;
+}
