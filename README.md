@@ -139,6 +139,6 @@ This project was created to practice:
 
 ## Author
 
-Nameerul Haque
+S M Nameerul Haque
 
 C++ Enthusiast | Future Full-Stack Developer
